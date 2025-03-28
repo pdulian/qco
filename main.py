@@ -8,11 +8,11 @@ import scripts
 def read_options(args):
     args = args[1:]
     options = {}
-    isArgument = False
+    is_argument = False
 
     for i in range(len(args)):
-        if isArgument:
-            isArgument = False
+        if is_argument:
+            is_argument = False
             continue
 
         key = args[i][1:]
@@ -20,7 +20,7 @@ def read_options(args):
 
         if i + 1 < len(args) and args[i + 1][0] != '-':
             value = args[i + 1]
-            isArgument = True
+            is_argument = True
 
         options[key] = value
 
