@@ -44,7 +44,7 @@ All possible arguments are:
     - `PU` - leaves only weights of projective representations i.e.: $\pi_\lambda(e^{i\varphi}U) = \pi_\lambda(U)$ for all $\varphi$.
     - `Q` - leaves only weights of quaternionic representations.
 - `-save_spectrum` - will save the whole spectrum (not just the norms) of $T_{\nu_\mathcal{S}, \lambda}$ operators.
-- `-symmetric` - will compute norm of symmetric gate set $\{U_1, U_2, ...\} \cup \{U_1^\dagger, U_2^\dagger, ...\}$
+- `-symmetric` - will compute norm of symmetric gate set $U_1, U_2, ..., U_n, U_1^\dagger, U_2^\dagger, ..., U_n^\dagger$
 - `-v x` - add `x` to the created file names.
 ### Other features
 Package contains also simple classes for computation of finite groups `FiniteGroup` in `finite_groups.py` and for computation of $SU(d)$ representations `SURepresentation` in `representation.py`.
