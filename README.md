@@ -6,7 +6,7 @@ To sample $\delta$ for random gate sets write in the console:
 ```console
 > python main.py [arguments]
 ```
-where arguments specify the ensemble. For sample size $N$, weights from $t$-design and typical ensembles these arguments are:
+where arguments specify the ensemble. For $N$ gate sets, weights from $t$-design and typical ensembles these arguments are:
 - Haar-random gate sets with $n$ elemnts from $U(2)$ (in article denoted by $\mathcal S_{\mu, n, \infty}$):
 ```console
 > python main.py -n_of_generators n -d 2 -t t -sample_size N
@@ -19,7 +19,7 @@ where arguments specify the ensemble. For sample size $N$, weights from $t$-desi
 ```console
 > python main.py -n_of_generators n -d 2 -t t -sample_size N -gate_order r -gates_path file.txt
 ```
-File `file.txt` should start with the group dimension `d` and and then each row is a row of the consecutive $c_i$ e.g.:   
+File `file.txt` should start with the group dimension `d` and then each row is a row of the consecutive $c_i$ e.g.:   
 2   
 $(c_1)^1_1$ $(c_1)^1_2$   
 $(c_1)^2_1$ $(c_1)^2_2$   
@@ -49,7 +49,7 @@ All possible arguments are:
 ### Other features
 Package contains also simple classes for computation of finite groups `FiniteGroup` in `finite_groups.py` and for computation of $SU(d)$ representations `SURepresentation` in `representation.py`.
 ### Parallel computation
-Package was written using `mpi4py` library and can be run on multiple cores using `mpiexec`:
+Package was written using [mpi4py](https://mpi4py.readthedocs.io/en/stable/) library and can be run on multiple cores using `mpiexec`:
 ```console
 > mpiexec python main.py [arguments]
 ```
