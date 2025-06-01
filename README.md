@@ -36,7 +36,7 @@ All possible arguments are:
 - `-gates_path txt_file_path` sets path to the text file containing set of gates $\mathcal C$. If this argument is given the sampled gate sets will be of the form $c^\dagger U_i c$ for every $c\in\mathcal C$ and $i=1, ..., g$ instead of the default Haar-random form $U_i$.
 - `-gate_order r` - sets order of the random gates to $r$.
 - `-weights_gen x` sets method for generating representation to `x` which should be one of:
-    - `t-design` - weghts appearing in a $t$-design with $t$ is given as `-t t`. Defult option.
+    - `t-design` - weghts appearing in a $t$-design where $t$ is given as `-t t`. Defult option.
     - `norm2` - $SU(d)$ weights $\lambda=(\lambda_1, ..., \lambda_{d-1})$ such that $\|\lambda\|_2 = \sum_i |\lambda_i|^2 \le J$ where $J$ is given as `-J J`.
     - `dim` - weights such that representation dimension is $\dim \pi_\lambda \le J$ where $J$ is given as `-J J`.
 
