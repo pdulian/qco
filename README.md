@@ -20,7 +20,7 @@ where arguments specify the ensemble. For sample size $N$, weights from $t$-desi
 > python main.py -n_of_generators n -d 2 -t t -sample_size N -gate_order r -gates_path file.txt
 ```
 File `file.txt` should start with the group dimension `d` and and then each row is a row of the consecutive $c_i$ e.g.:   
-2
+2   
 $(c_1)^1_1$ $(c_1)^1_2$   
 $(c_1)^2_1$ $(c_1)^2_2$   
 $(c_2)^1_1$ $(c_2)^1_2$   
