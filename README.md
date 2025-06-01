@@ -31,13 +31,13 @@ The program will save the result in two files one containg norms and the other c
 
 All possible arguments are:
 - `-sample_size N` sets the number of sampled gate sets to n.
-- `-n_of generators n` sets the number of independent random gates in each gate set to g. If set to `start-stop-step` performs computation for every g in `range(start, stop, step) = [start, start+step, ..., stop]`.
+- `-n_of generators n` sets the number of independent random gates in each gate set. If set to `start-stop-step` performs computation for every n in `range(start, stop, step) = [start, start+step, ..., stop]`.
 - `-d d` sets the dimension of the unitary group $U(d)$ which gate sets are sampled from.
-- `-gates_path txt_file_path` sets path to the text file containing set of gates $\mathcal C$. If this argument is given the sampled gate sets will be of the form $c^\dagger U_i c$ for every $c\in\mathcal C$ and $i=1, ..., g$ instead of the default Haar-random form $U_i$.
+- `-gates_path txt_file_path` sets path to the text file containing set of gates $\mathcal C$. If this argument is given the sampled gate sets will be of the form $c^\dagger U_i c$ for every $c\in\mathcal C$ and $i=1, ..., n$ instead of the default Haar-random form $U_i$.
 - `-gate_order r` - sets order of the random gates to $r$.
 - `-weights_gen x` sets method for generating representation to `x` which should be one of:
     - `t-design` - weghts appearing in a $t$-design where $t$ is given as `-t t`. Defult option.
-    - `norm2` - $SU(d)$ weights $\lambda=(\lambda_1, ..., \lambda_{d-1})$ such that $\|\lambda\|_2 = \sum_i |\lambda_i|^2 \le J$ where $J$ is given as `-J J`.
+    - `norm2` - $SU(d)$ weights $\lambda=(\lambda_1, ..., \lambda_{d-1})$ such that $||\lambda||_2 = \sum_i |\lambda_i|^2 \le J$ where $J$ is given as `-J J`.
     - `dim` - weights such that representation dimension is $\dim \pi_\lambda \le J$ where $J$ is given as `-J J`.
 
     For options different than `t-design` one can additionally filter weights by using `-weights_filter y` where `y` is:
