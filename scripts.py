@@ -205,8 +205,9 @@ def filter_mirror_weights(weights):
     return weights
 
 
-def sample_norms(sample_size, n_of_generators, d=2, v='0.0.0', gates_path='', weights_gen='norm2',
-    weights_filter='PU', gate_order: int | None = None, **kwargs):
+def sample_norms(sample_size, n_of_generators, d=2, v='0.0.0',
+    gates_path='', weights_gen='t-design', weights_filter='PU',
+    gate_order: int | None = None, **kwargs):
     comm = None
     rank = 0
     size = 1
@@ -231,7 +232,7 @@ def sample_norms(sample_size, n_of_generators, d=2, v='0.0.0', gates_path='', we
     d = int(d)
 
     # Is set of gates symmetric?
-    symmetries = [0, 1]
+    symmetries = [0]
     if 'symmetric' in kwargs:
         symmetries = [1]
     if 'unsymmetric' in kwargs:
@@ -448,7 +449,7 @@ def sample_norms(sample_size, n_of_generators, d=2, v='0.0.0', gates_path='', we
                 for symmetry in symmetries:
                     data_for_save = datas[symmetry][j]
                     op = ops[symmetry][j]
-                    data_for_save.addOp(op)
+                    data_for_save.add_max_eigs(op)
             gates_data.add_max_eigs([], random_gates)
             times[ADD_EIGS] = time.time() - flag
 

@@ -117,9 +117,9 @@ class QcoData:
             del _options['s']
         self.gates_file_name = get_file_name(name, _options, preserve_order)
 
-        self.directory = self.directory_prefix + f"dim{d}/G{n_of_generators}/"
+        self.directory = self.directory_prefix
 
-        self.gates_directory = self.directory_prefix + "dim" + str(d) + "/"
+        self.gates_directory = self.directory_prefix
 
         self.weights = [Pi.weight for Pi in representations]
 
